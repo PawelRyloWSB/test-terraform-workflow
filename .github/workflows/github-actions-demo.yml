@@ -1,0 +1,14 @@
+name: Run terraform
+
+on: [push]
+jobs:
+  tf:
+    name: Terraform
+    runs-on: ubuntu-latest
+    steps:
+      - name: Terraform init
+        run: terraform init
+      - name: Terraform plan
+        run: terraform plan
+      - name: Terraform apply
+        run: terraform apply
